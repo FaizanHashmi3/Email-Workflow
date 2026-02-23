@@ -215,7 +215,7 @@ fastify.post("/workflow/:id/run", async (req) => {
 
             success: true,
 
-            message: "triggered",
+            message: "Mail sent",
 
         };
 
