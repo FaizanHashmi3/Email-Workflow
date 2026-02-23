@@ -203,12 +203,30 @@ export default function CreateWorkflowModal({
 
                                     <div>
 
-                                        <Field
-                                            as="textarea"
-                                            name="message"
-                                            placeholder="Message"
-                                            className="input h-24 resize-none"
-                                        />
+                                        <div style={{
+                                            position: "relative",
+                                            overflow: "hidden",
+                                        }}>
+                                            <Field
+                                                as="textarea"
+                                                name="message"
+                                                placeholder="Message"
+                                                className="input h-24 resize-none"
+                                                style={{
+                                                    scrollbarWidth: "thin",
+                                                    scrollbarColor: "#6366f1 transparent"
+                                                }}
+                                            />
+                                            <style jsx>{`
+                                                div :global(textarea)::-webkit-scrollbar {
+                                                    width: 6px;
+                                                }
+                                                div :global(textarea)::-webkit-scrollbar-thumb {
+                                                    background: linear-gradient(#6366f1, #8b5cf6);
+                                                    border-radius: 10px;
+                                                }
+                                            `}</style>
+                                        </div>
 
                                         <ErrorMessage
                                             name="message"
