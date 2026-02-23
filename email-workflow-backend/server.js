@@ -30,7 +30,14 @@ const startServer = async () => {
 
         db = client.db();
 
-        await fastify.listen({ port: 4000 });
+        const PORT = process.env.PORT || 4000;
+
+        await fastify.listen({
+            port: Number(PORT),
+            host: "0.0.0.0"
+        });
+
+        console.log("Server running on port " + PORT);
 
         console.log("server started on 4000");
 
