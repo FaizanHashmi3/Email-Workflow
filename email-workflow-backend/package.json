@@ -1,0 +1,22 @@
+{
+  "name": "email-workflow-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@fastify/cors": "^11.2.0",
+    "axios": "^1.13.5",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "fastify": "^5.7.4",
+    "mongodb": "^7.1.0",
+    "n8n": "^2.8.3",
+    "node-fetch": "^2.7.0"
+  }
+}
