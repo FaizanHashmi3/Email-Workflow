@@ -190,8 +190,6 @@ fastify.post("/workflow/:id/run", async (req) => {
 
             message: workflow.message,
 
-            scheduledAt: workflow.scheduledAt,
-
         });
 
 
