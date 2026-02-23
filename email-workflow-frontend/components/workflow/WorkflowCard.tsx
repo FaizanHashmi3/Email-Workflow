@@ -57,7 +57,12 @@ export default function WorkflowCard({
         try {
             setLoading(true);
             const res: any = await triggerWorkflow(workflow._id);
-            toast.success(res.message);
+            if (res.error) {
+                toast.error(res.error)
+            }
+            else {
+                toast.success(res.message);
+            }
         } catch {
             toast.error("Failed to trigger");
         } finally {
